@@ -34,7 +34,6 @@ const moduleEntries = bemJsonEntries.reduce(function(res, curr) {
 
   return res;
 }, {});
-
 module.exports = {
   entry: moduleEntries,
 
