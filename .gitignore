@@ -1,0 +1,10 @@
+build/
+.DS_Store
+.idea/
+*.iml
+.project
+.svn
+npm-debug.log
+.enb
+!.enb/make.js
+!.enb/techs/

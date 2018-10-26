@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+    <circle fill="#0a61ff" cx="4.75" cy="8" r="1"/>
+    <circle fill="#0a61ff" cx="8.75" cy="8" r="1"/>
+    <circle fill="#0a61ff" cx="12.75" cy="8" r="1"/>
+    <circle fill="#0a61ff" cx="16.75" cy="8" r="1"/>
+    <circle fill="#0a61ff" cx="4.75" cy="12" r="1"/>
+    <circle fill="#0a61ff" cx="8.75" cy="12" r="1"/>
+    <circle fill="#0a61ff" cx="12.75" cy="12" r="1"/>
+    <circle fill="#0a61ff" cx="16.75" cy="12" r="1"/>
+    <circle fill="#0a61ff" cx="4.75" cy="16" r="1"/>
+    <circle fill="#0a61ff" cx="8.75" cy="16" r="1"/>
+    <circle fill="#0a61ff" cx="12.75" cy="16" r="1"/>
+    <circle fill="#0a61ff" cx="16.75" cy="16" r="1"/>
+    <path fill="#0a61ff" d="M21,3H17.75V1a1,1,0,0,0-2,0V3h-9V1a1,1,0,0,0-2,0V3H1A1,1,0,0,0,0,4V20a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V4A1,1,0,0,0,21,3ZM20,19H2V5H20Z"/>
+</svg>

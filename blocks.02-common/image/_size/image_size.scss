@@ -1,0 +1,20 @@
+// TODO: добавляйте новые размеры изображений если планируете их использовать на сайте
+$image-control-size: 25, 38, 40, 50, 60, 70, 75, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 240, 260, 270, 300, 350, 380, 400, 410, 420, 430, 450, 460, 465, 495, 500, 510, 540, 620, 690, 920, 1000, 1140, 1920;
+@mixin image-size($width, $height, $unit: px) {
+  &_#{$width}x#{$height} {
+    max-height: $height+$unit;
+    flex-basis: $width+$unit;
+    .fa, .fic {font-size: $height+$unit}
+    &:before{padding-top:  percentage($height / $width)}
+    .image__char{
+      font-size: $height + px;
+    }
+  }
+}
+.image_size {
+  @for $i from 0 to length($image-control-size) {
+    @for $j from 0 to length($image-control-size) {
+      @include image-size(nth($image-control-size, $i+1), nth($image-control-size, $j+1));
+    }
+  }
+}

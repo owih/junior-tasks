@@ -1,0 +1,23 @@
+.rating__item {
+  display: inline-block;
+  font-size: $font-size-base;
+  padding: 3px;
+  vertical-align: middle;
+  margin: 0;
+  @for $i from 1 through 5 {
+    .rating[data-rating="#{$i}"] &:nth-child(#{6 - $i}){
+      &, & ~ .rating__item{
+        color: $primary;
+      }
+    }
+  }
+  .was-validated .rating__input:invalid ~ &{
+    color: $form-feedback-invalid-color;
+  }
+  .rating__input:checked ~ & {
+    color: $primary;
+    &, & ~ .rating__item{
+      color: $primary;
+    }
+  }
+}

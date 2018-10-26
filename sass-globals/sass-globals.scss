@@ -1,0 +1,11 @@
+$rem-baseline: 16px !default; // Дефолтный размер шрифта в котором был расчитан макет == 1rem
+$page-min-width: 320px !default; // Минимальая ширина экрана на которую расчитан макет
+$enable-shadows: true !default;
+@import "~sass-rem/rem";
+@import "../blocks.02-common/fi/variables";
+@import "variables";
+@import "~bootstrap/scss/functions";
+@import "functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "mixins";
