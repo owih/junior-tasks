@@ -5,14 +5,7 @@ module.exports = {
         require('./common/header.bemjson'),
         {block: 'main', content: [
             {mix: {block: 'container'}, content: [
-                require('./common/breadcrumb.bemjson'),
-                // Главный заголовок
-                {block: 'title-compound', content: [
-                    {elem: 'header', content: 'Предопределенные компоненты'},
-                    {elem: 'addition', content: [
-                        require('./common/nav-simple-city.bemjson'),
-                    ]},
-                ]},
+                require('../blocks.03-bootstrap/breadcrumb/breadcrumb.tmpl-specs/01-swiper.bemjson'),
                 {block: 'card', mix: {block: 'mb-4'}, content: [
                     {elem: 'header', content: 'Глобальные настройки'},
                     {elem: 'body', content: [
