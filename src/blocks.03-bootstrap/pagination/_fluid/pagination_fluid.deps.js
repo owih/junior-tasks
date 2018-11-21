@@ -1,5 +1,5 @@
 module.exports = {
     shouldDeps: [
-        {elem: ['list']},
+        {elem: ['list', 'control']},
     ],
 };
