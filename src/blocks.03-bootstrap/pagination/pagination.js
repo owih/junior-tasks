@@ -3,6 +3,9 @@ const ClassName = {
     BLOCK: 'pagination',
     ITEM: 'pagination__item',
     LIST: 'pagination__list',
+    CONTROL: 'pagination__control',
+    CONTROL_PREV: 'pagination__control_prev',
+    CONTROL_NEXT: 'pagination__control_next',
 };
 class Pagination {
     constructor(elem) {
@@ -40,6 +43,12 @@ class Pagination {
                 slidePrevClass: `${ClassName.ITEM}_prev`,
                 slideDuplicateNextClass: `${ClassName.ITEM}_duplicate_next`,
                 slideDuplicatePrevClass: `${ClassName.ITEM}_duplicate_prev`,
+                navigation: {
+                    nextEl: this.block.getElementsByClassName(ClassName.CONTROL_NEXT),
+                    prevEl: this.block.getElementsByClassName(ClassName.CONTROL_PREV),
+                    disabledClass: `${ClassName.CONTROL}_disabled`,
+                    hiddenClass: `${ClassName.CONTROL}_hidden`,
+                },
             });
         }
     }
