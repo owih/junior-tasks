@@ -3,9 +3,9 @@ module.exports = function(bh) {
         ctx.tag('nav');
         let content = ctx.content();
         ctx.content([
-            {elem: 'control', content: '<'},
+            {elem: 'control', elemMods: {prev: true}, content: '<'},
             {elem: 'list', props: json.props, content: content},
-            {elem: 'control', content: '>'},
+            {elem: 'control', elemMods: {next: true}, content: '>'},
         ], true);
     });
 };

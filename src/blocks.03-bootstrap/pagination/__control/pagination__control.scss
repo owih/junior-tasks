@@ -1,0 +1,11 @@
+.pagination__control {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  &_prev{
+    left: 0;
+  }
+  &_next{
+    right: 0;
+  }
+}

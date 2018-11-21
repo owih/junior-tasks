@@ -1,10 +1,10 @@
-.breadcrumb_fluid {
+.pagination_fluid {
   position: relative;
   overflow: hidden;
   list-style: none;
   z-index: 1;
   touch-action: pan-y;
-  .breadcrumb_list {
+  .pagination_list {
     touch-action: pan-y;
     position: relative;
     width: 100%;
@@ -17,7 +17,7 @@
     transition-timing-function: ease-out;
     margin: 0 auto;
   }
-  .breadcrumb__item {
+  .pagination__item {
     flex-shrink: 0;
     height: 100%;
     position: relative;
