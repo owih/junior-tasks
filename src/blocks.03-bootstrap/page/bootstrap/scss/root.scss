@@ -1,5 +1,0 @@
-:root {
-  @each $color, $value in $grays {
-    --gray-#{$color}: #{$value};
-  }
-}

@@ -1,0 +1,6 @@
+@import "~bootstrap/scss/forms";
+.form-control{
+  &:-ms-input-placeholder {
+    color: $input-placeholder-color;
+  }
+}

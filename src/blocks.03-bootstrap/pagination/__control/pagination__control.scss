@@ -1,0 +1,16 @@
+.pagination__control {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  &_prev{
+    left: 0;
+    @include border-left-radius($border-radius);
+  }
+  &_next{
+    right: 0;
+    @include border-right-radius($border-radius);
+  }
+  &_disabled{
+    display: none;
+  }
+}

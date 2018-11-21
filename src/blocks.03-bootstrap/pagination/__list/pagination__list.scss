@@ -1,0 +1,5 @@
+.pagination__list {
+  display: flex;
+  @include list-unstyled();
+  margin-bottom: 0;
+}

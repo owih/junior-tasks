@@ -1,5 +1,5 @@
 module.exports = {
-    mustDeps: [
+    shouldDeps: [
         {block: 'a'},
     ],
 };

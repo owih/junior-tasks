@@ -1,5 +1,0 @@
-({
-    shouldDeps: [
-        {elem: ['input', 'label']}
-    ]
-})
