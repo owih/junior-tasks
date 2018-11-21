@@ -1,3 +1,3 @@
 module.exports = [
-    {block: 'pagination', mods: {fluid: true}, amount: 10, active: 1},
+    {block: 'pagination', mods: {fluid: true},  props: {amount: 100, active: 3}},
 ];
