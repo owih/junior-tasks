@@ -27,4 +27,4 @@ module.exports = function(bh) {
                 ctx.attr('role', 'button');
         }
     });
-}
+};

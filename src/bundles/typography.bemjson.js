@@ -5,10 +5,6 @@ module.exports = {
         require('./common/header.bemjson'),
         {block: 'main', content: [
             {mix: {block: 'container'}, content: [
-                require('../blocks.03-bootstrap/breadcrumb/breadcrumb.tmpl-specs/01-default.bemjson'),
-                require('../blocks.03-bootstrap/breadcrumb/breadcrumb.tmpl-specs/02-fluid.bemjson'),
-                require('../blocks.03-bootstrap/pagination/pagination.tmpl-specs/01-default.bemjson'),
-                require('../blocks.03-bootstrap/pagination/pagination.tmpl-specs/02-fluid.bemjson'),
                 {block: 'card', mix: {block: 'mb-4'}, content: [
                     {elem: 'header', content: 'Глобальные настройки'},
                     {elem: 'body', content: [
@@ -61,7 +57,7 @@ module.exports = {
                 {block: 'card', mix: {block: 'mb-4'}, content: [
                     {elem: 'header', content: 'Таблицы'},
                     {elem: 'body', content: [
-                        // require('../blocks.03-bootstrap/table/table.tmpl-specs/10-all.bemjson.js'),
+                        require('../blocks.02-common/table/table.tmpl-specs/10-all.bemjson.js'),
                     ]},
                 ]},
                 {block: 'card', mix: {block: 'mb-4'}, content: [
@@ -79,9 +75,9 @@ module.exports = {
                     {elem: 'header', content: 'Изображения с подписью (Figures)'},
                     {elem: 'body', content: [
                         {block: 'row', content: [
-                            // require('../blocks.03-bootstrap/figure/figure.tmpl-specs/10-all.bemjson.js').map((figure)=>{
-                            //     return {block: 'col', content: figure};
-                            // }),
+                            require('../blocks.02-common/figure/figure.tmpl-specs/10-all.bemjson.js').map((figure)=>{
+                                return {block: 'col', content: figure};
+                            }),
                         ]},
                     ]},
                 ]},
@@ -90,23 +86,23 @@ module.exports = {
                     {elem: 'body', content: [
                         {block: 'form', content: [
                             {mix: {block: 'form-group'}, content: [
-                                // require('../blocks.03-bootstrap/form-control/form-control.tmpl-specs/10-default.bemjson.js'),
+                                require('../blocks.02-common/form-control/form-control.tmpl-specs/10-default.bemjson.js'),
                             ]},
                             {mix: {block: 'form-group'}, content: [
-                                // require('../blocks.03-bootstrap/form-control/form-control.tmpl-specs/20-select.bemjson.js'),
+                                require('../blocks.02-common/form-control/form-control.tmpl-specs/20-select.bemjson.js'),
                             ]},
                             {mix: {block: 'form-group'}, content: [
-                                // require('../blocks.03-bootstrap/form-control/form-control.tmpl-specs/30-textarea.bemjson.js'),
+                                require('../blocks.02-common/form-control/form-control.tmpl-specs/30-textarea.bemjson.js'),
                             ]},
                             {mix: {block: 'form-group'}, content: [
-                                // require('../blocks.03-bootstrap/form-control/form-control.tmpl-specs/40-file.bemjson.js'),
+                                require('../blocks.02-common/form-control/form-control.tmpl-specs/40-file.bemjson.js'),
                             ]},
                             {mix: {block: 'row'}, content: [
                                 {mix: {block: 'col'}, content: [
-                                    // require('../blocks.03-bootstrap/form-check/form-check.tmpl-specs/10-checkbox.bemjson.js'),
+                                    require('../blocks.02-common/form-check/form-check.tmpl-specs/10-checkbox.bemjson.js'),
                                 ]},
                                 {mix: {block: 'col'}, content: [
-                                    // require('../blocks.03-bootstrap/form-check/form-check.tmpl-specs/20-radio.bemjson.js'),
+                                    require('../blocks.02-common/form-check/form-check.tmpl-specs/20-radio.bemjson.js'),
                                 ]},
                             ]},
                         ]},
@@ -117,15 +113,29 @@ module.exports = {
                     {elem: 'body', content: [
                         {elem: 'title', content: 'Стилизация'},
                         {block: 'row', content: [
-                            // require('../blocks.03-bootstrap/btn/btn.tmpl-specs/10-all-styled.bemjson.js').map((btn)=>{
-                            //     return {block: 'col', mix: {block: 'mb-2'}, content: btn};
-                            // }),
+                            require('../blocks.02-common/btn/btn.tmpl-specs/10-all-styled.bemjson.js').map((btn)=>{
+                                return {block: 'col', mix: {block: 'mb-2'}, content: btn};
+                            }),
                             {block: 'col'}, {block: 'col'}, {block: 'col'}, {block: 'col'},
                         ]},
                         {elem: 'title', content: 'Размеры'},
-                        // require('../blocks.03-bootstrap/btn/btn.tmpl-specs/20-all-size.bemjson.js').map((btn)=>{
-                        //     return {mix: {block: 'mb-2'}, content: btn};
-                        // }),
+                        require('../blocks.02-common/btn/btn.tmpl-specs/20-all-size.bemjson.js').map((btn)=>{
+                            return {mix: {block: 'mb-2'}, content: btn};
+                        }),
+                    ]},
+                ]},
+                {block: 'card', mix: {block: 'mb-4'}, content: [
+                    {elem: 'header', content: 'Постраничная навигация'},
+                    {elem: 'body', cls: 'bg-light', content: [
+                        require('../blocks.03-bootstrap/pagination/pagination.tmpl-specs/01-default.bemjson'),
+                        require('../blocks.03-bootstrap/pagination/pagination.tmpl-specs/02-fluid.bemjson'),
+                    ]},
+                ]},
+                {block: 'card', mix: {block: 'mb-4'}, content: [
+                    {elem: 'header', content: 'Хлебные крошки'},
+                    {elem: 'body', cls: 'bg-light', content: [
+                        require('../blocks.03-bootstrap/breadcrumb/breadcrumb.tmpl-specs/01-default.bemjson'),
+                        require('../blocks.03-bootstrap/breadcrumb/breadcrumb.tmpl-specs/02-fluid.bemjson'),
                     ]},
                 ]},
                 {block: 'card', mix: {block: 'mb-4'}, content: [
