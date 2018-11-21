@@ -1,0 +1,6 @@
+@import "~bootstrap/scss/root";
+:root {
+  @each $color, $value in $grays {
+    --gray-#{$color}: #{$value};
+  }
+}

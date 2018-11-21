@@ -1,0 +1,66 @@
+@import "~bootstrap/scss/type";
+h1, .h1{
+  line-height: 1;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+  &:not(:first-child){
+    margin-top: $headings-margin-bottom * 1.5;
+  }
+}
+
+h1, .h1 {
+  @include GatewayForProperty($h3-font-size, $h1-font-size, $page-min-width, map_get($grid-breakpoints, 'md'));
+}
+h2, .h2 {
+  @include GatewayForProperty($h4-font-size, $h2-font-size, $page-min-width, map_get($grid-breakpoints, 'md'));
+}
+h3, .h3 {
+  @include GatewayForProperty($h4-font-size, $h3-font-size, $page-min-width, map_get($grid-breakpoints, 'md'));
+}
+h4, .h4 {
+  @include GatewayForProperty($h6-font-size, $h4-font-size, $page-min-width, map_get($grid-breakpoints, 'md'));
+}
+h5, .h5 {
+  @include GatewayForProperty($h6-font-size, $h5-font-size, $page-min-width, map_get($grid-breakpoints, 'md'));
+}
+p{
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+// Картинки вставленые через визуальный редактор
+main img{
+  &:not([class]),
+  &:not(.img)[height],
+  &:not(.img)[width]{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $paragraph-margin-bottom;
+    height: auto !important;
+    &.float-left,
+    &[align='left']{
+      margin-right: $paragraph-margin-bottom;
+      max-width: 50%;
+    }
+    &.float-right,
+    &[align='right']{
+      margin-left: $paragraph-margin-bottom;
+      max-width: 50%;
+    }
+    &.float-left,
+    &[align='left'],
+    &.float-right,
+    &[align='right']{
+      @include media-breakpoint-down(xs) {
+        max-width: 100%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

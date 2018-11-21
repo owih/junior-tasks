@@ -1,0 +1,6 @@
+@import "~bootstrap/scss/print";
+@media print {
+  .container {
+    width: auto;
+  }
+}
