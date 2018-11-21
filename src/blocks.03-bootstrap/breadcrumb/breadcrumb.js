@@ -7,6 +7,11 @@ const ClassName = {
 class Breadcrumb {
     constructor(elem) {
         Instances.push(this);
+        // Bind functions;
+        this.getMods = this.getMods.bind(this);
+        this.initSwiper = this.initSwiper.bind(this);
+        this.updateSwiper = this.updateSwiper.bind(this);
+        
         this.block = elem;
         this.mods = this.getMods();
         if (this.mods.fluid) {
@@ -57,7 +62,8 @@ class Breadcrumb {
         let Instances = Breadcrumb.getAllInstances();
         let Blocks = Breadcrumb.getAllBlocks();
         let BlocksInited = Instances.map((ins) => ins.block);
-        let BlockNoInited = Blocks.filter((block) => BlocksInited.indexOf(block) < 0).map((item) => new Breadcrumb(item));
+        let BlockNoInited = Blocks.filter((block) => BlocksInited.indexOf(block) < 0);
+        BlockNoInited.forEach((item) => new Breadcrumb(item));
         return Instances;
     }
 }

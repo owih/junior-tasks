@@ -7,6 +7,8 @@ module.exports = {
             {mix: {block: 'container'}, content: [
                 require('../blocks.03-bootstrap/breadcrumb/breadcrumb.tmpl-specs/01-default.bemjson'),
                 require('../blocks.03-bootstrap/breadcrumb/breadcrumb.tmpl-specs/02-fluid.bemjson'),
+                require('../blocks.03-bootstrap/pagination/pagination.tmpl-specs/01-default.bemjson'),
+                require('../blocks.03-bootstrap/pagination/pagination.tmpl-specs/02-fluid.bemjson'),
                 {block: 'card', mix: {block: 'mb-4'}, content: [
                     {elem: 'header', content: 'Глобальные настройки'},
                     {elem: 'body', content: [
