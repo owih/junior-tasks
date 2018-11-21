@@ -1,6 +1,7 @@
 module.exports = function(bh) {
     bh.match('breadcrumb__item', function(ctx, json) {
         ctx.tag('li');
+        ctx.mix({block: 'breadcrumb-item'});
         let content = ctx.content();
         if (ctx.isSimple(content)) {
             if (!ctx.isLast()) {
