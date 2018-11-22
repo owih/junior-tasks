@@ -4,10 +4,10 @@ module.exports = function (bh) {
             .tag('input')
             .mix({block: 'form-check-input'})
             .attrs({
-                id: ctx.tParam('ID'),
                 type: 'checkbox',
+                id: ctx.tParam('ID'),
                 name: ctx.tParam('ID'),
                 value: ctx.generateId()
-            })
+            });
     })
-}
+};

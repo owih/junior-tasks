@@ -1,0 +1,6 @@
+@import "~json-pretty-html/style.css";
+.example{
+  &:not(:last-child){
+    margin-bottom: $grid-gutter-width;
+  }
+}
