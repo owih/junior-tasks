@@ -252,6 +252,7 @@ module.exports = {
               ],
               plugins: [
                 '@babel/transform-runtime',
+                '@babel/plugin-transform-react-jsx',
                 '@babel/plugin-syntax-dynamic-import',
               ],
             },
@@ -299,6 +300,7 @@ module.exports = {
             ],
             plugins: [
               '@babel/transform-runtime',
+              '@babel/plugin-transform-react-jsx',
               '@babel/plugin-syntax-dynamic-import',
             ],
           },
