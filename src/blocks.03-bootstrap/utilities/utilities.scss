@@ -38,6 +38,7 @@
 }
 
 // Управление размерами шрифта
+$font-sizes: () !default;
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
@@ -48,6 +49,7 @@
 }
 
 // Управление z-index
+$zindex: () !default;
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
