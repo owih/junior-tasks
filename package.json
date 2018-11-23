@@ -100,6 +100,7 @@
     "eslint-config-google": "^0.8.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^3.1.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
@@ -133,7 +134,7 @@
     "prod:stat": "npm run prod:prof && webpack-bundle-analyzer stats.json dist",
     "test:start": "./node_modules/.bin/enb make tmpl-specs",
     "test:rebuild": "cross-env BEM_TMPL_SPECS_SAVE_REFERENCE_HTML=true ./node_modules/.bin/enb make tmpl-specs",
-    "icon:build": "icon-font-generator src/blocks.02-common/fi/svg/*.svg -o src/blocks.02-common/fi/font --name fi -c false --html true --types woff"
+    "icon:build": "icon-font-generator src/blocks.01-base/fi/svg/*.svg -o src/blocks.02-common/fi/font --name fi -c false --html true --types woff"
   },
   "private": false
 }

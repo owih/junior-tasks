@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Column, Table, AutoSizer} from 'react-virtualized';
-import 'react-virtualized/styles.css';
+import Table from './components/Table.js';
 const Instances = [];
 const ClassName = {
     BLOCK: 'virtualized',
@@ -11,6 +10,7 @@ class Virtualized {
         Instances.push(this);
         this.block = elem;
         // Компанент
+        ReactDOM.render(<Table />, this.block);
     }
     static getAllInstances() {
         return Instances;
