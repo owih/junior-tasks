@@ -3,7 +3,9 @@ module.exports = {
     title: 'Пустая',
     content: [
         require('./common/header.bemjson'),
-        require('./common/virtualized.bemjson'),
+        {cls: 'container p-3', content: [
+            require('./common/virtualized.bemjson'),
+        ]},
         require('./common/footer.bemjson'),
     ],
 };

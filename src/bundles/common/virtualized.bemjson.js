@@ -1,3 +1,3 @@
 module.exports = [
-    {block: 'virtualized', attrs: {id: 'root'}},
+    {block: 'virtualized'},
 ];
