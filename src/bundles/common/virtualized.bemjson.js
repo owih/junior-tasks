@@ -1,3 +1,3 @@
 module.exports = [
-    {block: 'virtualized'},
+    {block: 'virtualized', attrs: {'data-url': 'stubs/table.json'}},
 ];
