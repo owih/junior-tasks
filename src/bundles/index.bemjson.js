@@ -4,7 +4,7 @@ module.exports = {
     content: [
         require('./common/header.bemjson'),
         {cls: 'container p-3', content: [
-            require('./common/virtualized.bemjson'),
+            {block: 'spreadsheet', attrs: {'data-url': 'stubs/log.json'}},
         ]},
         require('./common/footer.bemjson'),
     ],
