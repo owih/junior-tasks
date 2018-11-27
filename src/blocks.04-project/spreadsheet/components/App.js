@@ -5,8 +5,6 @@ import {Column, Table, List, AutoSizer, Grid, ScrollSync} from "react-virtualize
 import "react-virtualized/styles.css";
 
 
-
-
 class App extends React.PureComponent {
     constructor(props, context) {
         super(props, context);
@@ -44,12 +42,12 @@ class App extends React.PureComponent {
                             <div>
                                 <Grid
                                     className={this.props.cn['HEADER']}
-                                    width={width - Utils.getScrollBarSize()}
+                                    width={width}
                                     height={rowHeightHeader}
                                     scrollLeft={scrollLeft}
                                     onScroll={onScroll}
                                     columnCount={showKeys.length}
-                                    columnWidth={width / showKeys.length}
+                                    columnWidth={(width  - Utils.getScrollBarSize()) / showKeys.length}
                                     rowCount={1}
                                     rowHeight={rowHeightHeader}
                                     cellRenderer={this._cellHeaderRenderer}
@@ -61,7 +59,7 @@ class App extends React.PureComponent {
                                     scrollLeft={scrollLeft}
                                     onScroll={onScroll}
                                     columnCount={showKeys.length}
-                                    columnWidth={(width - Utils.getScrollBarSize()) / showKeys.length}
+                                    columnWidth={(width  - Utils.getScrollBarSize()) / showKeys.length}
                                     rowCount={this.props.data.length}
                                     rowHeight={rowHeightBase}
                                     cellRenderer={this._cellBodyRenderer}
