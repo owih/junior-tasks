@@ -413,7 +413,9 @@ module.exports = {
           progressive: true,
         })],
       }),
-    ] : [],
+    ] : [
+      new webpack.HotModuleReplacementPlugin()
+    ],
   ],
 
   optimization: {
@@ -444,6 +446,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, isProd ? 'dist' : 'build'),
     host: '0.0.0.0',
+    hot: true,
     overlay: true,
     watchOptions: {
       ignored: /node_modules/,
