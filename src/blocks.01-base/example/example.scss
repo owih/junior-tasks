@@ -1,6 +1,28 @@
-@import "~json-pretty-html/style.css";
 .example{
   &:not(:last-child){
     margin-bottom: $grid-gutter-width;
+  }
+  .json-pretty {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .json-selected {
+    background-color: rgba($gray-100, 0.5);
+  }
+
+  .json-string {
+    color: $blue;
+  }
+
+  .json-key {
+    color: $red;
+  }
+
+  .json-boolean {
+    color: $green;
+  }
+
+  .json-number {
+    color: $green;
   }
 }
