@@ -3,7 +3,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-  src: url('#{$icons-font-folder}/#{$icons-font-family}.woff') format('woff'),
+  src: url('#{$icons-font-folder}/#{$icons-font-family}.woff') format('woff');
 }
 .fi{
   @include fi();

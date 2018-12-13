@@ -6,3 +6,5 @@ build/
 .svn
 npm-debug.log
 node_modules
+test
+!dist/**/

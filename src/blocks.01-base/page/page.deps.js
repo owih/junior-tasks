@@ -1,6 +1,6 @@
 module.exports = {
     mustDeps: [
-        {block: 'utilities'},
+        {block: 'bh'},
     ],
     shouldDeps: [
         {elem: ['alert', 'ua']},

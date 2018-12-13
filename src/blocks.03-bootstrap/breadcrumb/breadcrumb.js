@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 const Instances = [];
 const ClassName = {
     BLOCK: 'breadcrumb',
@@ -11,7 +12,6 @@ class Breadcrumb {
         this.getMods = this.getMods.bind(this);
         this.initSwiper = this.initSwiper.bind(this);
         this.updateSwiper = this.updateSwiper.bind(this);
-        
         this.block = elem;
         this.mods = this.getMods();
         if (this.mods.fluid) {
@@ -52,13 +52,13 @@ class Breadcrumb {
         }
         this.swiper.update();
     }
-    static getAllInstances () {
+    static getAllInstances() {
         return Instances;
     }
-    static getAllBlocks () {
+    static getAllBlocks() {
         return Array.from(document.getElementsByClassName(ClassName.BLOCK));
     }
-    static initAllBlocks () {
+    static initAllBlocks() {
         let Instances = Breadcrumb.getAllInstances();
         let Blocks = Breadcrumb.getAllBlocks();
         let BlocksInited = Instances.map((ins) => ins.block);

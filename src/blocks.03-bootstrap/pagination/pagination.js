@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 const Instances = [];
 const ClassName = {
     BLOCK: 'pagination',
@@ -59,13 +60,13 @@ class Pagination {
         }
         this.swiper.update();
     }
-    static getAllInstances () {
+    static getAllInstances() {
         return Instances;
     }
-    static getAllBlocks () {
+    static getAllBlocks() {
         return Array.from(document.getElementsByClassName(ClassName.BLOCK));
     }
-    static initAllBlocks () {
+    static initAllBlocks() {
         let Instances = Pagination.getAllInstances();
         let Blocks = Pagination.getAllBlocks();
         let BlocksInited = Instances.map((ins) => ins.block);

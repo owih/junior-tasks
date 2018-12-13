@@ -1,11 +1,6 @@
 {
   "globals": {
-    "NODE_ENV": true,
-    "Popper": true,
-    "Tether": true,
-    "Util": true,
-    "ymaps": true,
-    "Swiper": true
+    "NODE_ENV": true
   },
   "env": {
     "es6": true,
@@ -16,7 +11,8 @@
   "extends": [
     "eslint:recommended",
     "google",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:vue/recommended"
   ],
   "plugins": [
     "standard",
