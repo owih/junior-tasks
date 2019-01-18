@@ -17,7 +17,10 @@ const isProd = 'production' === process.env.NODE_ENV;
 const srcPath = path.resolve(__dirname, 'src', 'bundles');
 
 const bemJsonEntries = fs.readdirSync(srcPath)
-    .filter((file) => /\.bemjson\.js$/i.test(file))
+    .filter((file) => {
+      if (process.env.page && (file.indexOf(process.env.page) < 0)) return false;
+      return /\.bemjson\.js$/i.test(file);
+    })
     .map((file) => path.join(srcPath, file));
 
 const moduleEntries = {};
