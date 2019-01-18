@@ -12,7 +12,7 @@ const HtmlIndexPlugin = require('@intervolga/html-index-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const pkg = require('./package.json');
 
-
+const feature = process.env.feature || '';
 const isProd = 'production' === process.env.NODE_ENV;
 const srcPath = path.resolve(__dirname, 'src', 'bundles');
 
@@ -38,7 +38,7 @@ const clientBH = 'static';
 module.exports = {
   entry: moduleEntries,
   output: {
-    path: path.resolve(__dirname, isProd ? 'dist' : 'build'),
+    path: path.resolve(__dirname, isProd ? 'dist' : 'build', feature),
     filename: 'assets/[name].js',
     publicPath: '',
   },
@@ -163,7 +163,7 @@ module.exports = {
 
   plugins: [
     // Common plugins
-    new CleanWebpackPlugin(['dist', 'build']),
+    new CleanWebpackPlugin(['dist', 'build', feature]),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -230,7 +230,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.resolve(__dirname, isProd ? 'dist' : 'build'),
+    contentBase: path.resolve(__dirname, isProd ? 'dist' : 'build', feature),
     host: '0.0.0.0',
     overlay: true,
     watchOptions: {
