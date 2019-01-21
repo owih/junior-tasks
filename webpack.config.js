@@ -1,3 +1,4 @@
+const branch = require('git-branch');
 const fs = require('fs');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -12,7 +13,9 @@ const HtmlIndexPlugin = require('@intervolga/html-index-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const pkg = require('./package.json');
 
-const feature = process.env.feature || '';
+const clientBH = pkg.clientBH || 'static';
+const publicPath = pkg.publicPath || ''; // '/local/templates/main/dist/'
+const branchName = process.env.branch && branch.sync();
 const isProd = 'production' === process.env.NODE_ENV;
 const srcPath = path.resolve(__dirname, 'src', 'bundles');
 
@@ -31,16 +34,18 @@ if (isProd) {
     moduleEntries[path.basename(bundle, '.js')] = bundle;
   });
 }
-
-const clientBH = 'static';
+var outputPath = path.resolve(__dirname, isProd ? 'dist' : 'build');
+if (branchName) {
+  outputPath = path.resolve(__dirname, 'branch', branchName);
+}
 
 
 module.exports = {
   entry: moduleEntries,
   output: {
-    path: path.resolve(__dirname, isProd ? 'dist' : 'build', feature),
+    path: outputPath,
     filename: 'assets/[name].js',
-    publicPath: '',
+    publicPath: branchName ? '' : isProd ? publicPath : '',
   },
   devtool: isProd ? 'source-map' : '',
   module: {
@@ -163,7 +168,7 @@ module.exports = {
 
   plugins: [
     // Common plugins
-    new CleanWebpackPlugin(['dist', 'build', feature]),
+    new CleanWebpackPlugin(['dist', 'build', branchName ? `branch/${branchName}` : '']),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -230,7 +235,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.resolve(__dirname, isProd ? 'dist' : 'build', feature),
+    contentBase: outputPath,
     host: '0.0.0.0',
     overlay: true,
     watchOptions: {
