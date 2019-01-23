@@ -20,17 +20,17 @@ const isProd = 'production' === process.env.NODE_ENV;
 const srcPath = path.resolve(__dirname, 'src', 'bundles');
 
 const bemJsonEntries = fs.readdirSync(srcPath)
-    .filter((file) => {
-      if (process.env.page && (file.indexOf(process.env.page) < 0)) return false;
-      return /\.bemjson\.js$/i.test(file);
-    })
-    .map((file) => path.join(srcPath, file));
+  .filter((file) => {
+    if (process.env.page && (file.indexOf(process.env.page) < 0)) return false;
+    return /\.bemjson\.js$/i.test(file);
+  })
+  .map((file) => path.join(srcPath, file));
 
 const moduleEntries = {};
 if (isProd) {
   moduleEntries.merged = bemJsonEntries;
 } else {
-  bemJsonEntries.forEach((bundle)=>{
+  bemJsonEntries.forEach((bundle) => {
     moduleEntries[path.basename(bundle, '.js')] = bundle;
   });
 }
@@ -108,7 +108,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 outputStyle: 'expanded',
-                data: `@import ${JSON.stringify(path.join( __dirname, 'src', 'sass-globals', 'sass-globals.scss'))};`,
+                data: `@import ${JSON.stringify(path.join(__dirname, 'src', 'sass-globals', 'sass-globals.scss'))};`,
                 sourceMap: isProd,
               },
             },
@@ -165,7 +165,6 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     // Common plugins
     new CleanWebpackPlugin(['dist', 'build', branchName ? `branch/${branchName}` : '']),
@@ -212,16 +211,14 @@ module.exports = {
           preset: ['default', {discardComments: {removeAll: true}}],
         },
       }),
-    ]: [],
+    ] : [],
   ],
-
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       'swiper': 'swiper/dist/js/swiper.min.js',
     },
   },
-
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -233,7 +230,6 @@ module.exports = {
       },
     },
   },
-
   devServer: {
     contentBase: outputPath,
     host: '0.0.0.0',
