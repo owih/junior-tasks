@@ -2,7 +2,7 @@ import prettyHtml from 'json-pretty-html';
 const Instances = [];
 const ClassName = {
     BLOCK: 'example',
-    SCHEMA: 'example__schema'
+    SCHEMA: 'example__schema',
 };
 class Example {
     constructor(elem) {
@@ -16,13 +16,13 @@ class Example {
             elem.innerHTML = prettyHtml(JSON.parse(elem.innerText));
         });
     }
-    static getAllInstances () {
+    static getAllInstances() {
         return Instances;
     }
-    static getAllBlocks () {
+    static getAllBlocks() {
         return Array.from(document.getElementsByClassName(ClassName.BLOCK));
     }
-    static initAllBlocks () {
+    static initAllBlocks() {
         let Instances = Example.getAllInstances();
         let Blocks = Example.getAllBlocks();
         let BlocksInited = Instances.map((ins) => ins.block);

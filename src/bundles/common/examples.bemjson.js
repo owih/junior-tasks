@@ -12,7 +12,7 @@ const examples = [
         require('./../../blocks.01-base/table/table.tmpl-specs/10-all.bemjson.js'),
     ]},
     {title: 'Изображения с подписью (Figures)', example: [
-        require('./../../blocks.01-base/figure/figure.tmpl-specs/10-all.bemjson.js')
+        require('./../../blocks.01-base/figure/figure.tmpl-specs/10-all.bemjson.js'),
     ]},
     {title: 'Списки', example: [
         require('./../../blocks.01-base/list/list.tmpl-specs/10-default.bemjson'),
@@ -65,7 +65,7 @@ module.exports = [
                                     } else {
                                         return example(block);
                                     }
-                                })
+                                }),
                             ]},
                         ]},
                     ]},

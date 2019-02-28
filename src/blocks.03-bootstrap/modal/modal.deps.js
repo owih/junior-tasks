@@ -1,5 +1,5 @@
 ({
     shouldDeps: [
-        {elem: ['dialog', 'content']}
+        {elem: ['dialog', 'content']},
     ],
-})
+});

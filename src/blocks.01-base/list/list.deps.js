@@ -1,5 +1,5 @@
 ({
     shouldDeps: [
-        {elem: 'li'}
-    ]
-})
+        {elem: 'li'},
+    ],
+});

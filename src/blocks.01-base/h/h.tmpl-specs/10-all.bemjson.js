@@ -5,4 +5,4 @@ module.exports = [
     {block: 'h', size: 4, content: 'Заголовок h4'},
     {block: 'h', size: 5, content: 'Заголовок h5'},
     {block: 'h', size: 6, content: 'Заголовок h6'},
-]
+];

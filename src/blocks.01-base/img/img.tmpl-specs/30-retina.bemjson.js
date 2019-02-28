@@ -5,6 +5,6 @@ module.exports = [
             'http://placehold.it/100x100?text=default 1x',
             'http://placehold.it/200x200?text=retina  2x',
         ],
-        content: 'my image'
-    }
-]
+        content: 'my image',
+    },
+];
