@@ -3,9 +3,8 @@ $page-min-width: 320px !default; // Минимальая ширина экран
 @import "~sass-rem/rem";
 @import "~bootstrap/scss/functions";
 @import "functions";
+@import "../blocks.01-base/fi/variables";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "mixins";
 @import "variables";
-
-@import "../blocks.01-base/fi/variables";

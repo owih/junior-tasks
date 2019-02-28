@@ -1,7 +1,0 @@
-$lg-path-fonts: '~lightgallery.js/src/fonts' !default;
-$lg-path-images: '~lightgallery.js/src/img' !default;
-@import "~lightgallery.js/src/sass/lightgallery.scss";
-// В исходнике значение зашитл пришлось переопределять;
-.lg-backdrop{
-  background-color: $lg-theme;
-}

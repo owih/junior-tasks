@@ -11,5 +11,5 @@ module.exports = function(bh) {
                 {elem: 'label', content},
             ], true);
         }
-    })
+    });
 };

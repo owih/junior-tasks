@@ -1,6 +1,6 @@
 import lazysizes from 'lazysizes';
 
-lazySizesConfig = lazySizesConfig || {};
-lazySizesConfig.init = false;
+window.lazySizesConfig = window.lazySizesConfig || {};
+window.lazySizesConfig.init = false;
 
 lazysizes.init();
