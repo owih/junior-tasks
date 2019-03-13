@@ -1,5 +1,5 @@
-module.exports = function (bh) {
-    bh.match('pagination__list', function (ctx, json) {
+module.exports = function(bh) {
+    bh.match('pagination__list', function(ctx, json) {
         ctx.tag('ul');
         let props = Object.assign({
             amount: 3,

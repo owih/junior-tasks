@@ -1,5 +1,5 @@
-module.exports = function (bh) {
-    bh.match('pagination__item', function (ctx, json) {
+module.exports = function(bh) {
+    bh.match('pagination__item', function(ctx, json) {
         ctx.tag('li');
         ctx.mix({block: 'page-item'});
         let props = Object.assign({

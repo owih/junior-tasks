@@ -5,7 +5,7 @@ module.exports = function(bh) {
         let content = ctx.content();
         if (ctx.isSimple(content)) {
             if (!ctx.isLast()) {
-                ctx.content({block: 'a', content: content}, true);   
+                ctx.content({block: 'a', content: content}, true);
             } else {
                 ctx.content({tag: 'span', content: content}, true);
             }
