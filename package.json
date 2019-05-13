@@ -7,6 +7,7 @@
     "url": "git://github.com/intervolga/project-stub"
   },
   "clientBH": "static",
+  "proxy": "http://shopm.iv34.ru",
   "publicPath": "",
   "engines": {
     "node": ">=6"
@@ -44,7 +45,9 @@
     ]
   },
   "dependencies": {
+    "@storybook/addon-notes": "^5.0.11",
     "bootstrap": "^4.3.1",
+    "highlight.js": "^9.15.6",
     "inputmask": "^4.0.2",
     "jquery": "^3.3.1",
     "jquery-ui": "^1.12.1",
@@ -54,6 +57,8 @@
     "node-sass": "^4.11.0",
     "path": "^0.12.7",
     "popper.js": "^1.14.6",
+    "post-compile-webpack-plugin": "^0.1.2",
+    "pretty": "^2.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "sass-loader": "^7.1.0",
@@ -73,7 +78,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/runtime": "^7.0.0",
-    "@intervolga/bembh-loader": "https://github.com/TeG2405/bembh-loader.git",
+    "@intervolga/bembh-loader": "^1.1.8",
     "@intervolga/bemdecl-loader": "^1.0.5",
     "@intervolga/bemdeps-loader": "^1.1.6",
     "@intervolga/bemjson-loader": "^1.2.4",
@@ -83,6 +88,8 @@
     "@intervolga/html-index-plugin": "^1.0.3",
     "@intervolga/html-webpack-asset-template-plugin": "^1.0.3",
     "@intervolga/optimize-cssnano-plugin": "^1.0.6",
+    "@storybook/addon-info": "^5.0.11",
+    "@storybook/html": "^5.0.11",
     "autoprefixer": "^8.6.5",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.2",
@@ -132,7 +139,9 @@
     "prod:stat": "npm run prod:prof && webpack-bundle-analyzer stats.json dist",
     "test:start": "./node_modules/.bin/enb make tmpl-specs",
     "test:rebuild": "cross-env BEM_TMPL_SPECS_SAVE_REFERENCE_HTML=true ./node_modules/.bin/enb make tmpl-specs",
-    "icon:build": "icon-font-generator src/blocks.01-base/fi/svg/*.svg -o src/blocks.02-common/fi/font --name fi -c false --html true --types woff"
+    "icon:build": "icon-font-generator src/blocks.01-base/fi/svg/*.svg -o src/blocks.02-common/fi/font --name fi -c false --html true --types woff",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "private": false
 }

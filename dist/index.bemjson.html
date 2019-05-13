@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="ua-no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.1, maximum-scale=1.0, minimal-ui, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>Пустая</title>
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+    <script data-skip-moving="true">
+        ! function(e, n) {
+            function r() {
+                var e = {
+                    elem: n.createElement("modernizr")
+                }.elem.style;
+                try {
+                    return e.fontSize = "3ch", -1 !== e.fontSize.indexOf("ch")
+                } catch (e) {
+                    return !1
+                }
+            }
+
+            function t() {
+                var n, r = e.crypto || e.msCrypto;
+                if (r && "getRandomValues" in r && "Uint32Array" in e) {
+                    var t = new Uint32Array(10),
+                        a = r.getRandomValues(t);
+                    n = a && "number" == typeof a[0]
+                }
+                return !!n
+            }
+            var a = n.documentElement.className;
+            a = a.replace("ua-no-js", "ua-js"), "performance" in e && t() && r() || navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform) && Promise && t() && r() ? a += " ua-modern" : a += " ua-no-modern", n.documentElement.className += " " + a
+        }(window, document);
+    </script>
+    <script data-skip-moving="true">
+        ! function(o, n) {
+            document.documentElement.className += "ontouchstart" in o || navigator.maxTouchPoints ? " ua-touch" : " ua-no-touch"
+        }(window);
+    </script>
+<link href="merged.css" rel="stylesheet"/></head>
+
+<body>
+    <!--noindex--><noscript class="page__alert">В вашем браузере отключен JavaScript. Многие элементы сайта могут работать некорректно.</noscript>
+    <div class="page__alert visible-no-modern">Ваш браузер устарел и не обеспечивает полноценную и безопасную работу с сайтом. Пожалуйста <a rel="nofollow" target="_blank" onclick="window.open(this.href, '_blank');return 0" href="https://browsehappy.com/">обновите</a> браузер чтобы улучшить взаимодействие с сайтом.</div>
+    <!--/noindex-->
+    <header class="header"></header>
+    <footer class="footer"></footer>
+<script type="text/javascript" src="assets/merged.js"></script></body>
+
+</html>
