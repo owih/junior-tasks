@@ -1,9 +1,7 @@
 import {BH} from '@intervolga/bh-ext/index.js';
 const bh = new BH();
 const getBH = (cb) => {
-    window.initMatches && window.initMatches.forEach((func) => {
-        func(bh);
-    });
+    window.initMatches && window.initMatches.forEach((func) => func(bh));
     window.initMatches = false;
     cb(bh);
 };

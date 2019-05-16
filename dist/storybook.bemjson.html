@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="ua-no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.1, maximum-scale=1.0, minimal-ui, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>Storybook example</title>
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+    <script data-skip-moving="true">!function(e,n){function r(){var e={elem:n.createElement("modernizr")}.elem.style;try{return e.fontSize="3ch",-1!==e.fontSize.indexOf("ch")}catch(e){return!1}}function t(){var n,r=e.crypto||e.msCrypto;if(r&&"getRandomValues"in r&&"Uint32Array"in e){var t=new Uint32Array(10),a=r.getRandomValues(t);n=a&&"number"==typeof a[0]}return!!n}var a=n.documentElement.className;a=a.replace("ua-no-js","ua-js"),"performance"in e&&t()&&r()||navigator.platform&&/iPad|iPhone|iPod/.test(navigator.platform)&&Promise&&t()&&r()?a+=" ua-modern":a+=" ua-no-modern",n.documentElement.className+=" "+a}(window,document);</script>
+    <script data-skip-moving="true">!function(o,n){document.documentElement.className+="ontouchstart"in o||navigator.maxTouchPoints?" ua-touch":" ua-no-touch"}(window);</script>
+<link href="merged.css" rel="stylesheet"/></head>
+
+<body>
+    <!--noindex--><noscript class="page__alert">В вашем браузере отключен JavaScript. Многие элементы сайта могут работать некорректно.</noscript>
+    <div class="page__alert visible-no-modern">Ваш браузер устарел и не обеспечивает полноценную и безопасную работу с сайтом. Пожалуйста <a rel="nofollow" target="_blank" onclick="window.open(this.href, '_blank');return 0" href="https://browsehappy.com/">обновите</a> браузер чтобы улучшить взаимодействие с сайтом.</div>
+    <!--/noindex-->
+    <figure class="figure"><img class="img figure-img img-fluid" src="http://placehold.it/400x200" alt="My image">
+        <figcaption class="figure__caption figure-caption">Подпись к изображению</figcaption>
+    </figure>
+    <figure class="figure"><img class="img figure-img img-fluid" src="http://placehold.it/400x200" alt="My image">
+        <figcaption class="figure__caption figure-caption text-center">Подпись к изображению</figcaption>
+    </figure>
+    <figure class="figure"><img class="img figure-img img-fluid" src="http://placehold.it/400x200" alt="My image">
+        <figcaption class="figure__caption figure-caption text-right">Подпись к изображению</figcaption>
+    </figure>
+    <h1>Заголовок h1</h1>
+    <h2>Заголовок h2</h2>
+    <h3>Заголовок h3</h3>
+    <h4>Заголовок h4</h4>
+    <h5>Заголовок h5</h5>
+    <h6>Заголовок h6</h6><img class="img" src="http://placehold.it/100x100" alt="my image"><img class="img img_lazy lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="my image" data-src="http://placehold.it/100x100?text=lazy"><img class="img img_lazy lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="my image" data-src="http://placehold.it/100x100?text=lazy" data-srcset="http://placehold.it/100x100?text=default 1x, http://placehold.it/200x200?text=retina  2x">
+    <ul class="list">
+        <li class="list__li">Пункт 1</li>
+        <li class="list__li">Пункт 2</li>
+        <li class="list__li">Пункт 3<ul class="list">
+                <li class="list__li">Пункт 3.1</li>
+                <li class="list__li">Пункт 3.2</li>
+                <li class="list__li">Пункт 3.3</li>
+            </ul>
+        </li>
+        <li class="list__li">Пункт 3</li>
+    </ul>
+    <ol class="list">
+        <li class="list__li">Пункт 1</li>
+        <li class="list__li">Пункт 2</li>
+        <li class="list__li">Пункт 3<ol class="list">
+                <li class="list__li">Пункт 3.1</li>
+                <li class="list__li">Пункт 3.2</li>
+                <li class="list__li">Пункт 3.3</li>
+            </ol>
+        </li>
+        <li class="list__li">Пункт 3</li>
+    </ol>
+    <table class="table">
+        <thead class="table__thead">
+            <tr class="table__tr">
+                <th class="table__th">Заголовок</th>
+                <th class="table__th">Заголовок</th>
+                <th class="table__th">Заголовок</th>
+            </tr>
+        </thead>
+        <tbody class="table__tbody">
+            <tr class="table__tr">
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+            </tr>
+        </tbody>
+        <tfoot class="table__tfoot">
+            <tr class="table__tr">
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table class="table table-bordered">
+        <thead class="table__thead">
+            <tr class="table__tr">
+                <th class="table__th">Заголовок</th>
+                <th class="table__th">Заголовок</th>
+                <th class="table__th">Заголовок</th>
+            </tr>
+        </thead>
+        <tbody class="table__tbody">
+            <tr class="table__tr">
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+            </tr>
+        </tbody>
+        <tfoot class="table__tfoot">
+            <tr class="table__tr">
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+                <td class="table__td">Ячейка</td>
+            </tr>
+        </tfoot>
+    </table><a class="btn btn-primary" role="button" href="#">Текст кнопки</a><a class="btn btn-secondary" role="button" href="#">Текст кнопки</a><a class="btn btn-light" role="button" href="#">Текст кнопки</a><a class="btn btn-link" role="button" href="#">Текст кнопки</a><a class="btn btn-success" role="button" href="#">Текст кнопки</a><a class="btn btn-info" role="button" href="#">Текст кнопки</a><a class="btn btn-danger" role="button" href="#">Текст кнопки</a><a class="btn btn-warning" role="button" href="#">Текст кнопки</a><a class="btn btn-dark" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-primary" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-secondary" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-light" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-dark" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-success" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-info" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-danger" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-warning" role="button" href="#">Текст кнопки</a><a class="btn btn-primary btn-lg" role="button" href="#">Текст кнопки</a><a class="btn btn-primary" role="button" href="#">Текст кнопки</a><a class="btn btn-primary btn-sm" role="button" href="#">Текст кнопки</a>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036771" name="uniq15579947036771" value="uniq155799470367717" checked><label class="form-check__label form-check-label" for="uniq15579947036771">Чекбокс выбранный</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036772" name="uniq15579947036772" value="uniq155799470367718"><label class="form-check__label form-check-label" for="uniq15579947036772">Чекбокс не выбранный</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036773" name="uniq15579947036773" value="uniq155799470367719" disabled><label class="form-check__label form-check-label" for="uniq15579947036773">Чекбокс выбранный заблокированый</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036774" name="uniq15579947036774" value="uniq155799470367720" checked disabled><label class="form-check__label form-check-label" for="uniq15579947036774">Чекбокс выбранный заблокированый, выбраный</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036775" name="RADIO_TEST" value="uniq155799470367721" checked><label class="form-check__label form-check-label" for="uniq15579947036775">Радио кнопка выбрана</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036776" name="RADIO_TEST" value="uniq155799470367722"><label class="form-check__label form-check-label" for="uniq15579947036776">Радио кнопка</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036777" name="RADIO_TEST" value="uniq155799470367723"><label class="form-check__label form-check-label" for="uniq15579947036777">Радио кнопка заблокирована</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036778" name="uniq15579947036778" value="uniq155799470367724" checked disabled><label class="form-check__label form-check-label" for="uniq15579947036778">Радио кнопка заблокирована/выбрана</label></div><input class="form-control" id="uniq15579947036779" placeholder="Placeholder" value="Input value" type="text"><select class="form-control" id="uniq155799470367710">
+        <option value="uniq155799470367711">Пункт 1</option>
+        <option value="uniq155799470367712">Пункт 2</option>
+        <option value="uniq155799470367713">Пункт 3</option>
+        <option value="Значение" selected>Пункт 4</option>
+    </select><textarea class="form-control" id="uniq155799470367714" placeholder="Placeholder">Текст в textarea поле ввода</textarea><input class="form-control" type="file" id="uniq155799470367715">
+    <div class="gide-line">
+        <h1>Заголовок h1</h1>
+        <h2>Заголовок h2</h2>
+        <h3>Заголовок h3</h3>
+        <h4>Заголовок h4</h4>
+        <h5>Заголовок h5</h5>
+        <h6>Заголовок h6</h6>
+    </div>
+    <div class="image image_size_200x200">
+        <div class="image__inner"><img class="img img_lazy lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://placehold.it/200x200"></div>
+    </div>
+    <div class="image image_size_200x200 text-center">
+        <div class="image__inner"><img class="img img_lazy lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://placehold.it/100x100"></div>
+    </div>
+    <div class="image image_size_200x200">
+        <div class="image__inner"><img class="img img_lazy lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://placehold.it/100x100"></div>
+    </div>
+    <div class="image image_size_200x200 image_align_middle">
+        <div class="image__inner"><img class="img img_lazy lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://placehold.it/100x100"></div>
+    </div>
+    <div class="image image_size_200x200 image_align_top">
+        <div class="image__inner"><img class="img img_lazy lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://placehold.it/100x100"></div>
+    </div>
+    <div class="palette"></div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb__item breadcrumb-item"><a class="a" href="#">Главная</a></li>
+        <li class="breadcrumb__item breadcrumb-item"><a class="a" href="#">Раздел</a></li>
+        <li class="breadcrumb__item breadcrumb-item"><a class="a" href="#">Подраздел</a></li>
+        <li class="breadcrumb__item breadcrumb-item"><span>Открытая страница</span></li>
+    </ol>
+    <nav class="breadcrumb breadcrumb_fluid">
+        <ol class="breadcrumb__list">
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Главная</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Раздел</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Подраздел</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Открытая страница</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Главная</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Раздел</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Подраздел</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Открытая страница</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Главная</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Раздел</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><a class="a" href="#">Подраздел</a></li>
+            <li class="breadcrumb__item breadcrumb-item breadcrumb-item"><span>Открытая страница</span></li>
+        </ol>
+    </nav><a data-toggle="modal" href="#ID">Модальное окно</a>
+    <div class="modal fade" id="ID" tabindex="-1" role="dialog">
+        <div class="modal__dialog modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal__content modal-content">
+                <div class="modal__header modal-header">
+                    <h5 class="modal__title modal-title">Заголовок модального окна</h5><button class="modal__close close" data-dismiss="modal"><i class="fi fi_icon_close"></i></button>
+                </div>
+                <div class="modal__body modal-body">
+                    <p>Содержимое модального окна</p>
+                </div>
+                <div class="modal__footer modal-footer"><a class="btn btn-primary" role="button" href="#">Сохранить</a></div>
+            </div>
+        </div>
+    </div>
+    <ul class="pagination">
+        <li class="pagination__item page-item"><a class="a page-link" href="#">&laquo;</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">1</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">2</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">3</a></li>
+        <li class="pagination__item page-item active"><span class="page-link">4</span></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">5</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">6</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">7</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">8</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">9</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">10</a></li>
+        <li class="pagination__item page-item"><a class="a page-link" href="#">&raquo;</a></li>
+    </ul>
+    <nav class="pagination pagination_fluid">
+        <div class="pagination__control pagination__control_prev page-item"><button class="page-link" type="button">&raquo;</button></div>
+        <ul class="pagination__list">
+            <li class="pagination__item page-item"><a class="a page-link" href="#">
+                    <</a> </li> <li class="pagination__item page-item"><a class="a page-link" href="#">1</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">2</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">3</a></li>
+            <li class="pagination__item page-item active"><span class="page-link">4</span></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">5</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">6</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">7</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">8</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">9</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">10</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">11</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">12</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">13</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">14</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">15</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">16</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">17</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">18</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">19</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">20</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">21</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">22</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">23</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">24</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">25</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">26</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">27</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">28</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">29</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">30</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">31</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">32</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">33</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">34</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">35</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">36</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">37</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">38</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">39</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">40</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">41</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">42</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">43</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">44</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">45</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">46</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">47</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">48</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">49</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">50</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">51</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">52</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">53</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">54</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">55</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">56</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">57</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">58</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">59</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">60</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">61</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">62</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">63</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">64</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">65</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">66</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">67</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">68</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">69</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">70</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">71</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">72</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">73</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">74</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">75</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">76</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">77</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">78</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">79</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">80</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">81</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">82</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">83</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">84</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">85</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">86</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">87</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">88</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">89</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">90</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">91</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">92</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">93</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">94</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">95</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">96</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">97</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">98</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">99</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">100</a></li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">></a></li>
+        </ul>
+        <div class="pagination__control pagination__control_next page-item"><button class="page-link" type="button">&raquo;</button></div>
+    </nav>
+<script type="text/javascript" src="assets/merged.js"></script></body>
+
+</html>
