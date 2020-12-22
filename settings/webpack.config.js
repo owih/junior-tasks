@@ -12,7 +12,6 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const PostCompile = require('post-compile-webpack-plugin');
 
 // config
-const fs = require('path');
 const path = require('path');
 const branch = require('git-branch');
 const utils = require('./utils');
@@ -22,7 +21,6 @@ const mode = process.env.NODE_ENV || 'production';
 const modeBranch = process.env.branch || false;
 const modeProduction = mode === 'production';
 
-const page = process.env.page;
 const branchName = modeBranch && branch.sync();
 const publicPath = !modeBranch && modeProduction ? pkg.publicPath : '';
 const proxy = pkg.proxy || '';
@@ -35,9 +33,6 @@ const srcGlobalSass = path.join(src, 'sass-globals', 'sass-globals.scss');
 const pathsBundles = utils.getAllFilesInPathSync(srcBundles, [], false)
   .filter((path) => /\.bemjson\.js$/i.test(path));
 
-const pathsTmpls = utils.getAllFilesInPathSync(src)
-  .filter((path) => /.tmpl-specs.*\.bemjson\.js$/i.test(path));
-
 
 const fileName = {
   dir: modeBranch ? ['branch', branchName].join('/') : modeProduction ? 'dist' : 'build',
@@ -46,7 +41,7 @@ const fileName = {
   css: '[name].css',
 };
 
-const entries = pathsBundles; // [...pathsBundles, ...pathsTmpls];
+const entries = pathsBundles;
 const outputPath = path.join(dirProject, fileName.dir);
 
 const entry = modeProduction ?
@@ -67,7 +62,6 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'swiper': 'swiper/dist/js/swiper.min.js',
     },
   },
   optimization: {
@@ -85,6 +79,11 @@ module.exports = {
     contentBase: outputPath,
     host: '0.0.0.0',
     overlay: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
+    },
     watchOptions: {
       ignored: /node_modules/,
     },
