@@ -45,10 +45,11 @@
     ]
   },
   "dependencies": {
-    "@storybook/addon-actions": "^5.0.11",
-    "@storybook/addon-notes": "^5.0.11",
-    "@storybook/addon-viewport": "^5.0.11",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/addon-viewport": "^6.1.11",
     "bootstrap": "^4.3.1",
+    "concurrently": "^5.3.0",
     "highlight.js": "^9.15.6",
     "inputmask": "^4.0.2",
     "jquery": "^3.3.1",
@@ -97,8 +98,8 @@
     "@intervolga/html-index-plugin": "^1.0.3",
     "@intervolga/html-webpack-asset-template-plugin": "^1.0.3",
     "@intervolga/optimize-cssnano-plugin": "^1.0.6",
-    "@storybook/addon-info": "^5.0.11",
-    "@storybook/html": "^5.0.11",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/html": "^6.1.11",
     "autoprefixer": "^8.6.5",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.2",
@@ -153,7 +154,7 @@
     "test:rebuild": "cross-env BEM_TMPL_SPECS_SAVE_REFERENCE_HTML=true ./node_modules/.bin/enb make tmpl-specs",
     "icon:build": "icon-font-generator src/blocks.01-base/fi/svg/*.svg -o src/blocks.01-base/fi/font --name fi -c false --html true --types woff",
     "storybook": "start-storybook -p 6006",
-    "storybook:watch": "concurrently --kill-others \"npm run storybook\" \"npm run prod:watch:storybook\"",
+    "storybook:watch": "cross-env STORYBOOK=true concurrently --kill-others \"npm run storybook\" \"npm run prod:watch:storybook\"",
     "storybook:build": "build-storybook"
   },
   "private": false

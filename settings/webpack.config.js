@@ -18,11 +18,15 @@ const utils = require('./utils');
 const pkg = require('../package.json');
 
 const mode = process.env.NODE_ENV || 'production';
+const modeStorybook = process.env.STORYBOOK;
 const modeBranch = process.env.branch || false;
 const modeProduction = mode === 'production';
 
 const branchName = modeBranch && branch.sync();
-const publicPath = !modeBranch && modeProduction ? pkg.publicPath : '';
+
+let publicPath = '';
+if (modeProduction && !modeStorybook) publicPath = pkg.publicPath;
+
 const proxy = pkg.proxy || '';
 const dirProject = path.resolve(__dirname, '../');
 
@@ -35,7 +39,7 @@ const pathsBundles = utils.getAllFilesInPathSync(srcBundles, [], false)
 
 
 const fileName = {
-  dir: modeBranch ? ['branch', branchName].join('/') : modeProduction ? 'dist' : 'build',
+  dir: modeBranch ? ['branch', branchName].join('/') : (modeProduction || modeStorybook) ? 'dist' : 'build',
   main: 'assets/[name].js',
   asset: 'assets/[path][name].[ext]',
   css: '[name].css',
