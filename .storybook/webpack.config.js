@@ -1,30 +1,25 @@
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('./../settings/webpack.config');
+const utils = require('./../settings/utils');
 
-const dirProject = path.resolve(__dirname, '../');
-
-const src = path.join(dirProject, 'src');
-const srcBundles = path.join(src, 'bundles');
+const helpers = path.resolve(__dirname, '../.storybook/helpers.js');
+const pathsTmpls = path.resolve(__dirname, '../src/bundles/storybook.bemjson.js');
 
 module.exports = async ({ config, mode }) => {
-  const modeProduction = mode === 'production';
-  config.module.rules.push({
-    test: /\.js$/,
-    use: [
-      {
-        loader: 'babel-loader',
-        options: {
-          cacheDirectory: !modeProduction,
-          babelrc: true,
-        }
-      },
-    ],
-  });
-  config.plugins.push(
-    new CopyWebpackPlugin([
-      {from: path.join(srcBundles, '**', '*.{jpeg,jpg,png,gif,svg,ico,json}'), context: srcBundles},
-    ]),
-  );
-  // Return the altered config
+  config.entry = [
+    ...config.entry,
+    pathsTmpls,
+  ];
+  
+  config.resolve.alias['helpers$'] = helpers;
+  
+  config.module.rules = [
+    ...config.module.rules,
+    ...webpack.module.rules,
+  ];
+  config.plugins = [
+    ...config.plugins,
+    ...webpack.plugins,
+  ];
   return config;
 };

@@ -1,5 +1,4 @@
 // plugins
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -62,11 +61,6 @@ module.exports = {
     path: outputPath,
     filename: fileName.main,
     publicPath,
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-    },
   },
   optimization: {
     splitChunks: {
@@ -144,7 +138,7 @@ module.exports = {
         }),
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: {loader: 'babel-loader', options: {cacheDirectory: !modeProduction, babelrc: true}},
       },
@@ -152,7 +146,7 @@ module.exports = {
         test: /\.bemjson\.js$/,
         use: [
           {loader: 'babel-loader', options: {cacheDirectory: !modeProduction, babelrc: true}},
-          '@intervolga/bemrequire-loader',
+          {loader: '@intervolga/bemrequire-loader'},
           {
             loader: '@intervolga/bembh-loader',
             options: {client: 'static', bhFilename: require.resolve('@intervolga/bh-ext')},
@@ -165,13 +159,9 @@ module.exports = {
             loader: '@intervolga/bemdecl-loader',
             options: {levels: pkg.bemLevels},
           },
-          '@intervolga/bemjson-loader',
-          '@intervolga/eval-loader',
+          {loader: '@intervolga/bemjson-loader'},
+          {loader: '@intervolga/eval-loader'},
         ],
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
       },
     ],
   },
@@ -202,7 +192,6 @@ module.exports = {
       {from: path.join(srcBundles, '**', '*.{jpeg,jpg,png,gif,svg,ico,json}'), context: srcBundles},
     ]),
     new ImageminPlugin({test: /\.(jpe?g|png|gif|svg)$/i, disable: modeProduction}),
-    new VueLoaderPlugin(),
     ...modeProduction ?
       [
         new webpack.LoaderOptionsPlugin({
