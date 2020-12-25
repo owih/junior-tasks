@@ -15,7 +15,7 @@ module.exports = async ({ config, mode }) => {
   
   config.module.rules = [
     ...config.module.rules,
-    ...webpack.module.rules,
+    ...webpack.module.rules.slice(3), // storybook сам обрабатывает статику отключим первые 3 лоадера
   ];
   config.plugins = [
     ...config.plugins,
