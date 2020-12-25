@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>fi</title>
+
     <style>
 
         body {
@@ -51,33 +52,9 @@
             border-radius: 0 0 3px 3px;
             color: #666;
         }
-
-        @font-face {
-    font-family: "fi";
-    src: url("./fi.woff?2755b3d3efca04cae22164f5bfbedace") format("woff");
-}
-
-i {
-    line-height: 1;
-}
-
-i[class^="icon-"]:before, i[class*=" icon-"]:before {
-    font-family: fi !important;
-    font-style: normal;
-    font-weight: normal !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-close:before {
-    content: "\f101";
-}
-
-
     </style>
+
+    <link rel="stylesheet" type="text/css" href="fi.css" />
 </head>
 <body>
 
@@ -86,7 +63,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="icon-close"></i>
+                <i class=" icon-close"></i>
             </span>
             <br>
             <span class='label'>close</span>
