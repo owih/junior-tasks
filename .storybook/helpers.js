@@ -5,7 +5,12 @@ module.exports.getExample = (entries) => entries.keys().reduce((acc, path) => {
   acc[variant] = Variant;
   Variant.parameters = {
     notes: {
-      markdown: `# Блок ${block}`,
+      markdown: `
+      # Блок ${block}
+      ${'```json'}
+      ${JSON.stringify(json, null, 2)}
+      ${'```'}
+      `,
     },
   };
   return acc;
