@@ -156,7 +156,8 @@
     "icon:build": "icon-font-generator src/blocks.01-base/fi/svg/*.svg -o src/blocks.01-base/fi/font --name fi -c false --html true --types woff",
     "storybook": "start-storybook -p 6006",
     "storybook:watch": "cross-env STORYBOOK=true concurrently --kill-others \"npm run storybook\" \"npm run prod:watch:storybook\"",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook",
+    "storybook:generate": "node ./.storybook/generate.js"
   },
   "private": false
 }
