@@ -2,8 +2,8 @@ const path = require('path');
 const webpack = require('./../settings/webpack.config');
 const utils = require('./../settings/utils');
 
-const helpers = path.resolve(__dirname, '../.storybook/helpers.js');
-const pathsTmpls = path.resolve(__dirname, '../src/bundles/storybook.bemjson.js');
+const helpers = path.resolve(path.join(__dirname, '..', '.storybook', 'helpers.js'));
+const pathsTmpls = path.resolve(path.join(__dirname, '..', 'src', 'bundles', 'storybook.bemjson.js'));
 
 module.exports = async ({ config, mode }) => {
   config.entry = [

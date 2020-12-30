@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const utils = require('./../settings/utils');
-const template = path.resolve(__dirname, 'templates/bese.stories.js');
-const src = path.resolve(__dirname, '../src/');
+const template = path.resolve(path.join(__dirname, 'templates', 'bese.stories.js'));
+const src = path.resolve(path.join(__dirname, '..', 'src'));
 
 fs.readFile(template, 'utf8', function (err, data) {
   const template = data;
@@ -10,7 +10,7 @@ fs.readFile(template, 'utf8', function (err, data) {
   
   utils.getAllDirectoriesInPathSync(src).filter((path) => /.tmpl-specs$/i.test(path)).forEach(dir => {
     const [, name] = dir.match(/([^\\]*)\.tmpl-specs$/);
-    const src = path.resolve(dir, `../${name}.stories.js`);
+    const src = path.resolve(path.join(dir, '..', `${name}.stories.js`));
     fs.writeFile(src, template.replace('#{name}', name), function (err) {
       if (err) throw err;
     });
