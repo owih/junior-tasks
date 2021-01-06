@@ -17,7 +17,7 @@
             "Edge >= 17"
           ]
         },
-        "corejs": 2,
+        "corejs": 3,
         "modules": "cjs",
         "useBuiltIns": "usage",
         "forceAllTransforms": true,
