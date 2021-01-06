@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const utils = require('./../settings/utils');
-const template = path.resolve(path.join(__dirname, 'templates', 'bese.stories.js'));
+const template = path.resolve(path.join(__dirname, 'templates', 'base.stories.js'));
 const src = path.resolve(path.join(__dirname, '..', 'src'));
 
 fs.readFile(template, 'utf8', function (err, data) {

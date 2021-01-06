@@ -8,14 +8,43 @@
     <meta name="format-detection" content="telephone=no">
     <title>Storybook example</title>
     <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
-    <script data-skip-moving="true">!function(e,n){function r(){var e={elem:n.createElement("modernizr")}.elem.style;try{return e.fontSize="3ch",-1!==e.fontSize.indexOf("ch")}catch(e){return!1}}function t(){var n,r=e.crypto||e.msCrypto;if(r&&"getRandomValues"in r&&"Uint32Array"in e){var t=new Uint32Array(10),a=r.getRandomValues(t);n=a&&"number"==typeof a[0]}return!!n}var a=n.documentElement.className;a=a.replace("ua-no-js","ua-js"),"performance"in e&&t()&&r()||navigator.platform&&/iPad|iPhone|iPod/.test(navigator.platform)&&Promise&&t()&&r()?a+=" ua-modern":a+=" ua-no-modern",n.documentElement.className+=" "+a}(window,document);</script>
-    <script data-skip-moving="true">!function(o,n){document.documentElement.className+="ontouchstart"in o||navigator.maxTouchPoints?" ua-touch":" ua-no-touch"}(window);</script>
+    <script data-skip-moving="true">
+        ! function(e, n) {
+            function r() {
+                var e = {
+                    elem: n.createElement("modernizr")
+                }.elem.style;
+                try {
+                    return e.fontSize = "3ch", -1 !== e.fontSize.indexOf("ch")
+                } catch (e) {
+                    return !1
+                }
+            }
+
+            function t() {
+                var n, r = e.crypto || e.msCrypto;
+                if (r && "getRandomValues" in r && "Uint32Array" in e) {
+                    var t = new Uint32Array(10),
+                        a = r.getRandomValues(t);
+                    n = a && "number" == typeof a[0]
+                }
+                return !!n
+            }
+            var a = n.documentElement.className;
+            a = a.replace("ua-no-js", "ua-js"), "performance" in e && t() && r() || navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform) && Promise && t() && r() ? a += " ua-modern" : a += " ua-no-modern", n.documentElement.className += " " + a
+        }(window, document);
+    </script>
+    <script data-skip-moving="true">
+        ! function(o, n) {
+            document.documentElement.className += "ontouchstart" in o || navigator.maxTouchPoints ? " ua-touch" : " ua-no-touch"
+        }(window);
+    </script>
 <link href="merged.css" rel="stylesheet"/></head>
 
 <body>
     <!--noindex--><noscript class="page__alert">В вашем браузере отключен JavaScript. Многие элементы сайта могут работать некорректно.</noscript>
     <div class="page__alert visible-no-modern">Ваш браузер устарел и не обеспечивает полноценную и безопасную работу с сайтом. Пожалуйста <a rel="nofollow" target="_blank" onclick="window.open(this.href, '_blank');return 0" href="https://browsehappy.com/">обновите</a> браузер чтобы улучшить взаимодействие с сайтом.</div>
-    <!--/noindex-->
+    <!--/noindex--><i class="fi fi_icon_close"></i>
     <figure class="figure"><img class="img figure-img img-fluid" src="http://placehold.it/400x200" alt="My image">
         <figcaption class="figure__caption figure-caption">Подпись к изображению</figcaption>
     </figure>
@@ -99,19 +128,19 @@
             </tr>
         </tfoot>
     </table><a class="btn btn-primary" role="button" href="#">Текст кнопки</a><a class="btn btn-secondary" role="button" href="#">Текст кнопки</a><a class="btn btn-light" role="button" href="#">Текст кнопки</a><a class="btn btn-link" role="button" href="#">Текст кнопки</a><a class="btn btn-success" role="button" href="#">Текст кнопки</a><a class="btn btn-info" role="button" href="#">Текст кнопки</a><a class="btn btn-danger" role="button" href="#">Текст кнопки</a><a class="btn btn-warning" role="button" href="#">Текст кнопки</a><a class="btn btn-dark" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-primary" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-secondary" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-light" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-dark" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-success" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-info" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-danger" role="button" href="#">Текст кнопки</a><a class="btn btn-outline-warning" role="button" href="#">Текст кнопки</a><a class="btn btn-primary btn-lg" role="button" href="#">Текст кнопки</a><a class="btn btn-primary" role="button" href="#">Текст кнопки</a><a class="btn btn-primary btn-sm" role="button" href="#">Текст кнопки</a>
-    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036771" name="uniq15579947036771" value="uniq155799470367717" checked><label class="form-check__label form-check-label" for="uniq15579947036771">Чекбокс выбранный</label></div>
-    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036772" name="uniq15579947036772" value="uniq155799470367718"><label class="form-check__label form-check-label" for="uniq15579947036772">Чекбокс не выбранный</label></div>
-    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036773" name="uniq15579947036773" value="uniq155799470367719" disabled><label class="form-check__label form-check-label" for="uniq15579947036773">Чекбокс выбранный заблокированый</label></div>
-    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq15579947036774" name="uniq15579947036774" value="uniq155799470367720" checked disabled><label class="form-check__label form-check-label" for="uniq15579947036774">Чекбокс выбранный заблокированый, выбраный</label></div>
-    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036775" name="RADIO_TEST" value="uniq155799470367721" checked><label class="form-check__label form-check-label" for="uniq15579947036775">Радио кнопка выбрана</label></div>
-    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036776" name="RADIO_TEST" value="uniq155799470367722"><label class="form-check__label form-check-label" for="uniq15579947036776">Радио кнопка</label></div>
-    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036777" name="RADIO_TEST" value="uniq155799470367723"><label class="form-check__label form-check-label" for="uniq15579947036777">Радио кнопка заблокирована</label></div>
-    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq15579947036778" name="uniq15579947036778" value="uniq155799470367724" checked disabled><label class="form-check__label form-check-label" for="uniq15579947036778">Радио кнопка заблокирована/выбрана</label></div><input class="form-control" id="uniq15579947036779" placeholder="Placeholder" value="Input value" type="text"><select class="form-control" id="uniq155799470367710">
-        <option value="uniq155799470367711">Пункт 1</option>
-        <option value="uniq155799470367712">Пункт 2</option>
-        <option value="uniq155799470367713">Пункт 3</option>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq16099706812991" name="uniq16099706812991" value="uniq160997068129917" checked><label class="form-check__label form-check-label" for="uniq16099706812991">Чекбокс выбранный</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq16099706812992" name="uniq16099706812992" value="uniq160997068129918"><label class="form-check__label form-check-label" for="uniq16099706812992">Чекбокс не выбранный</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq16099706812993" name="uniq16099706812993" value="uniq160997068129919" disabled><label class="form-check__label form-check-label" for="uniq16099706812993">Чекбокс выбранный заблокированый</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="checkbox" id="uniq16099706812994" name="uniq16099706812994" value="uniq160997068129920" checked disabled><label class="form-check__label form-check-label" for="uniq16099706812994">Чекбокс выбранный заблокированый, выбраный</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq16099706812995" name="RADIO_TEST" value="uniq160997068129921" checked><label class="form-check__label form-check-label" for="uniq16099706812995">Радио кнопка выбрана</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq16099706812996" name="RADIO_TEST" value="uniq160997068129922"><label class="form-check__label form-check-label" for="uniq16099706812996">Радио кнопка</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq16099706812997" name="RADIO_TEST" value="uniq160997068129923"><label class="form-check__label form-check-label" for="uniq16099706812997">Радио кнопка заблокирована</label></div>
+    <div class="form-check"><input class="form-check__input form-check-input" type="radio" id="uniq16099706812998" name="uniq16099706812998" value="uniq160997068129924" checked disabled><label class="form-check__label form-check-label" for="uniq16099706812998">Радио кнопка заблокирована/выбрана</label></div><input class="form-control" id="uniq16099706812999" placeholder="Placeholder" value="Input value" type="text"><select class="form-control" id="uniq160997068129910">
+        <option value="uniq160997068129911">Пункт 1</option>
+        <option value="uniq160997068129912">Пункт 2</option>
+        <option value="uniq160997068129913">Пункт 3</option>
         <option value="Значение" selected>Пункт 4</option>
-    </select><textarea class="form-control" id="uniq155799470367714" placeholder="Placeholder">Текст в textarea поле ввода</textarea><input class="form-control" type="file" id="uniq155799470367715">
+    </select><textarea class="form-control" id="uniq160997068129914" placeholder="Placeholder">Текст в textarea поле ввода</textarea><input class="form-control" type="file" id="uniq160997068129915">
     <div class="gide-line">
         <h1>Заголовок h1</h1>
         <h2>Заголовок h2</h2>
@@ -186,10 +215,12 @@
         <li class="pagination__item page-item"><a class="a page-link" href="#">&raquo;</a></li>
     </ul>
     <nav class="pagination pagination_fluid">
-        <div class="pagination__control pagination__control_prev page-item"><button class="page-link" type="button">&raquo;</button></div>
+        <div class="pagination__control pagination__control_prev page-item"><button class="page-link" type="button">&laquo;</button></div>
         <ul class="pagination__list">
             <li class="pagination__item page-item"><a class="a page-link" href="#">
-                    <</a> </li> <li class="pagination__item page-item"><a class="a page-link" href="#">1</a></li>
+                    << /a>
+            </li>
+            <li class="pagination__item page-item"><a class="a page-link" href="#">1</a></li>
             <li class="pagination__item page-item"><a class="a page-link" href="#">2</a></li>
             <li class="pagination__item page-item"><a class="a page-link" href="#">3</a></li>
             <li class="pagination__item page-item active"><span class="page-link">4</span></li>

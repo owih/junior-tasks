@@ -2,10 +2,10 @@ const path = require('path');
 const webpack = require('./../settings/webpack.config');
 const utils = require('./../settings/utils');
 
-const helpers = path.resolve(path.join(__dirname, '..', '.storybook', 'helpers.js'));
+const helpers = path.resolve(path.join(__dirname, 'helpers.js'));
 const pathsTmpls = path.resolve(path.join(__dirname, '..', 'src', 'bundles', 'storybook.bemjson.js'));
 
-module.exports = async ({ config, mode }) => {
+module.exports = async ({ config }) => {
   config.entry = [
     ...config.entry,
     pathsTmpls,

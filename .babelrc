@@ -5,20 +5,19 @@
       {
         "targets": {
           "browsers": [
-            "ChromeAndroid >= 35",
-            "FirefoxAndroid >= 38",
-            "iOS >= 8",
+            "ChromeAndroid >= 78",
+            "FirefoxAndroid >= 44",
+            "iOS >= 11",
             "Android >= 4.4",
-            "ExplorerMobile >= 11",
-            "OperaMobile >= 37",
-            "Chrome >= 35",
-            "Firefox >= 38",
-            "Opera >= 18",
-            "Safari >= 8",
-            "Explorer >= 11",
-            "Edge >= 13"
+            "OperaMobile >= 65",
+            "Chrome >= 49",
+            "Firefox >= 44",
+            "Opera >= 65",
+            "Safari >= 12",
+            "Edge >= 17"
           ]
         },
+        "corejs": 2,
         "modules": "cjs",
         "useBuiltIns": "usage",
         "forceAllTransforms": true,
