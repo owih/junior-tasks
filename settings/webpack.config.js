@@ -167,7 +167,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin([outputPath]),
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(mode),
       'LANG': JSON.stringify('ru'),
