@@ -1,13 +1,13 @@
 {
   "author": "Shkarupa Alex",
   "name": "project-stub",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/intervolga/project-stub"
+    "url": "git@bitbucket.org:TeG2405/frontend-project-start.git"
   },
   "clientBH": "static",
-  "proxy": "http://shopm.iv34.ru",
+  "proxy": "",
   "publicPath": "",
   "engines": {
     "node": ">=6"
