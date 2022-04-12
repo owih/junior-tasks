@@ -10,9 +10,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "google",
-    "plugin:react/recommended",
-    "plugin:vue/recommended"
+    "google"
   ],
   "plugins": [
     "standard",

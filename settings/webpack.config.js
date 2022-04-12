@@ -28,7 +28,7 @@ const modeProduction = Boolean(['production', 'branch', 'storybook'].indexOf(mod
 const dirProject = path.resolve(__dirname, '../');
 const src = path.join(dirProject, 'src');
 const srcBundles = path.join(src, 'bundles');
-const srcGlobalSass = path.join(src, 'sass-globals', 'sass-globals.scss');
+const srcGlobalSass = path.join(src, 'sass-globals', 'globals.scss');
 
 const regex = (path) => /\.bemjson\.js$/i.test(path);
 const pathsBundles = _.filter(utils.getAllFilesInPathSync(srcBundles, [], false), regex);
@@ -166,7 +166,13 @@ module.exports = {
             },
             {
               loader: 'sass-loader',
-              options: {sourceMap: modeProduction, outputStyle: 'expanded', data: `@import ${JSON.stringify(srcGlobalSass)};`},
+              options: {
+                additionalData: `@import ${JSON.stringify(srcGlobalSass)};`,
+                sassOptions: {
+                  sourceMap: modeProduction,
+                  outputStyle: 'expanded',
+                },
+              },
             },
           ],
         }),

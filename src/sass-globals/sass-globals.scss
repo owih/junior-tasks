@@ -1,8 +1,0 @@
-$rem-baseline: 16px !default; // Дефолтный размер шрифта в котором был расчитан макет == 1rem
-$page-min-width: 320px !default; // Минимальая ширина экрана на которую расчитан макет
-
-@import "~sass-rem/rem";
-@import "functions";
-
-@import "variables";
-@import "mixins";
