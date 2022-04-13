@@ -1,0 +1,40 @@
+.each-others {
+
+  &__column {
+    width: 33.33333%;
+    box-shadow: 0 0 0 1px black;
+    background-color: white;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__row {
+    height: 300px;
+  }
+
+  &__top {
+    vertical-align: top;
+  }
+
+  &__middle {
+    vertical-align: middle;
+  }
+
+  &__bottom {
+    vertical-align: bottom;
+  }
+
+  &__left {
+    text-align: left;
+  }
+
+  &__center {
+    text-align: center;
+  }
+
+  &__right {
+    text-align: right;
+  }
+}

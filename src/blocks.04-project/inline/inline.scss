@@ -1,0 +1,33 @@
+.inline {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__image {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+
+  &__text {
+    display: inline-block;
+  }
+
+  &__content {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__top {
+    vertical-align: top;
+  }
+
+  &__middle {
+    vertical-align: middle;
+  }
+
+  &__bottom {
+    vertical-align: bottom;
+  }
+}
