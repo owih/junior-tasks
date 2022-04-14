@@ -1,0 +1,116 @@
+.alignment-block {
+  position: relative;
+  height: 800px;
+
+  &__wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: '. . . ' '. center .' '. . .';
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__grid-item {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 1px gray;
+    background-color: white;
+  }
+
+  &__center {
+    grid-area: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -6px;
+    padding: 12px;
+  }
+
+  &__example {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+  }
+
+  &__text {
+    padding: 6px;
+    background-color: #63c2a7;
+    border: 2px solid;
+  }
+
+  &__item {
+    padding: 6px;
+    width: 33.333333%;
+    text-align: center;
+
+    &:hover {
+      .alignment-block__example {
+        display: block;
+      }
+    }
+  }
+
+  &__example[data-example="left-top"] {
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+
+  &__example[data-example="center-top"] {
+    background-color: red;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__example[data-example="right-top"] {
+    background-color: red;
+    top: 0;
+    right: 0;
+  }
+
+  &__example[data-example="right-middle"] {
+    background-color: red;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__example[data-example="right-bottom"] {
+    background-color: red;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__example[data-example="center-bottom"] {
+    background-color: red;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__example[data-example="left-bottom"] {
+    background-color: red;
+    left: 0;
+    bottom: 0;
+  }
+  &__example[data-example="left-center"] {
+    background-color: red;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__example[data-example="center-middle"] {
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    width: 80px;
+    height: 80px;
+  }
+}
