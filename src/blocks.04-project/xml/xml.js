@@ -34,14 +34,12 @@ class Xml {
   }
 
   sendAjax(tryCount) {
-    const promise = new Promise((resolve, reject) => {
+    tryCount = this.updateCounter(tryCount);
 
-      ++tryCount;
-      console.log(tryCount);
-
+    new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
 
-      xhr.open('GET', 'https://jsonplaceholder.typicode.com/ussers?_limit=3');
+      xhr.open('GET', 'https://jsonplaceholder.typicode.com/usesrs?_limit=3');
       xhr.responseType = 'json';
 
       xhr.send();
@@ -63,11 +61,15 @@ class Xml {
           this.tryCountUpdate(tryCount);
         }
         this.errorUpdate(error);
+        this.tryCountUpdate(tryCount);
       });
   }
 
+  updateCounter(tryCount) {
+   return ++tryCount;
+  }
+
   tryCountUpdate(tryCount) {
-    console.log(this.tryCount);
     this.tryCount.textContent = 'Количество попыток: ' + tryCount;
   }
 
